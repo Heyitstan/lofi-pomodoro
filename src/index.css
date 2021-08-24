@@ -38,3 +38,17 @@ code {
   left: 2%;
   bottom: 3%;
 }
+
+#timer {
+  position: fixed;
+  z-index: 1;
+  top: 2%;
+  left: 2%;
+  width: 10%;
+  height: 5%;
+  background: white;
+  text-align: center;
+  font-size: 2em;
+  margin: auto;
+  
+}
