@@ -19,7 +19,9 @@ code {
   width: 200%;
   height: 200%;
 }
+
 #background {
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
@@ -28,4 +30,11 @@ code {
   margin: auto;
   min-width: 50%;
   min-height: 50%;
+}
+
+#music-player {
+  position: fixed;
+  z-index: 1;
+  left: 2%;
+  bottom: 3%;
 }
