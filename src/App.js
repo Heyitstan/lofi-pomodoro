@@ -11,7 +11,13 @@ function App() {
     <div id="main">
       <MusicPlayer />
       <SpotifyPlayer />
-      {/* <Timer /> */}
+
+      <div id="timer-container">
+      <div id="button-container">
+        <button id="pausePlayButton" className="btn pause" onClick={pausePlayTimer}>pause</button>
+        <button id="resetButton" className="btn" onClick={resetTimer}>reset</button>
+      </div>
+    </div>
 
       <div id="bg">
         <Background />
