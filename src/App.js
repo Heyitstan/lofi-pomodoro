@@ -1,16 +1,22 @@
 import './App.css';
 import './Components/render-bg-and-music'
-import generateNewBackground from "./Components/new-background-button";
+// import generatebackground from "./Components/new-background-button";
+import MusicPlayer from "./Components/soundcloud-player";
+import Background from './Components/giphy'
+import SpotifyPlayer from "./Components/spotify";
+// import Timer from './Components/timer';
 
 function App() {
   return (
     <div id="main">
+      <MusicPlayer />
+      <SpotifyPlayer />
+      {/* <Timer /> */}
 
       <div id="bg">
+        <Background />
       </div>
-
-      <button id="random-background-btn" type="button" className="btn" onClick={generateNewBackground}>New background</button>
-
+      
     </div> 
   );
 }
