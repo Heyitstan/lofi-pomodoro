@@ -1,10 +1,9 @@
 import './App.css';
-import './Components/render-bg-and-music'
-// import generatebackground from "./Components/new-background-button";
-import MusicPlayer from "./Components/soundcloud-player";
-import Background from './Components/giphy'
-import SpotifyPlayer from "./Components/spotify";
-// import Timer from './Components/timer';
+import './Components/initial-render'
+import generateNewBackground from "./Components/new-background-button";
+import pausePlayTimer from "./Components/pause-play-timer";
+import resetTimer from "./Components/reset-timer";
+
 
 function App() {
   return (
@@ -19,10 +18,15 @@ function App() {
       </div>
     </div>
 
-      <div id="bg">
-        <Background />
+    <div id="timer-container">
+      <div id="button-container">
+        <button id="pausePlayButton" className="btn pause" onClick={pausePlayTimer}>pause</button>
+        <button id="resetButton" className="btn" onClick={resetTimer}>reset</button>
       </div>
-      
+    </div>
+
+      <button id="random-background-btn" type="button" className="btn" onClick={generateNewBackground}>New background</button>
+
     </div> 
   );
 }
