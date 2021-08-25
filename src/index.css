@@ -63,6 +63,7 @@ code {
   font-size: 18px;
   margin: 4px 2px;
   cursor: pointer;
+  background-color: #a9a9a9;
 }
 
 #button-container {
