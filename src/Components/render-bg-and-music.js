@@ -3,9 +3,9 @@
 import timer from './timer';
 // import spotifyPlayer from "./spotify";
 
-window.onload = function () {
-//   background();
-//   musicPlayer();
-//   spotifyPlayer();
-  timer();
-}
+// window.onload = function () {
+// //   background();
+// //   musicPlayer();
+// //   spotifyPlayer();
+//   // timer();
+// }
