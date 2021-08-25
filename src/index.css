@@ -32,6 +32,13 @@ code {
   min-height: 50%;
 }
 
+#spotify-player {
+  position: fixed;
+  z-index: 1;
+  left: 2%;
+  bottom: 15%;
+}
+
 #music-player {
   position: fixed;
   z-index: 1;
