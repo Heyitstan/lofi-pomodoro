@@ -53,6 +53,18 @@ code {
   border-radius: 100px;
 }
 
+#random-background-btn {
+  position: fixed;
+  z-index: 1;
+  left: 15%;
+  bottom: 5%;
+  padding: 10px 24px;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
 #button-container {
   position: fixed;
   z-index: 1;
