@@ -1,7 +1,9 @@
-var startTimer = (duration, display) => {
-    var timer = duration;
-    var minutes;
-    var seconds;
+var timer = () => {
+
+  var startTimer = (duration, display) => {
+      var timer = duration;
+      var minutes;
+      var seconds;
 
     setInterval(function() {
       minutes = parseInt(timer / 60, 10); // takes duration in milliseconds and divides it by 60 to get minutes
@@ -16,47 +18,24 @@ var startTimer = (duration, display) => {
         timer = duration;
       }
     }, 1000);
-  }
+  };
 
-var timer = function() {
-  var mainDiv = document.getElementById('main'); // grabs #main
-
-  var myTimer = document.createElement('div'); // creates a new div element for the timer;
-  myTimer.setAttribute('id', 'timer');
-  myTimer.setAttribute('id', 'timer'); 
- 
-  mainDiv.appendChild(myTimer); // appends myTimer div to mainDiv
-
-  var timerDisplay = document.querySelector('#timer');
-  var twentyFiveMinutes = 60 * 25;
-  var display = timerDisplay;
-  startTimer(twentyFiveMinutes, display);
-
-  var buttonContainer = document.createElement('div');
-  buttonContainer.setAttribute('id', 'button-container');
-
-  var pausePlayButton = document.createElement('button');
-  pausePlayButton.setAttribute('type', 'button');
-  pausePlayButton.setAttribute('id', 'pausePlayButton');
-  pausePlayButton.setAttribute('class', 'btn btn-primary');
-  pausePlayButton.innerHTML = 'start';
+  var showTimer = () => {
+    var timerDiv = document.getElementById('timer-container'); // grabs #timer-container
+    
+    var myTimer = document.createElement('div'); // creates a new div element for the timer;
+    myTimer.setAttribute('id', 'timer');
   
+    timerDiv.appendChild(myTimer); // appends myTimer div to timerDiv
 
-  var resetButton = document.createElement('button');
-  resetButton.setAttribute('type', 'button');
-  resetButton.setAttribute('id', 'resetButton');
-  resetButton.setAttribute('class', 'btn btn-primary');
-  resetButton.innerHTML = 'reset';
+    var timerDisplay = document.querySelector('#timer');
+    var twentyFiveMinutes = 60 * 25;
+    var display = timerDisplay;
+    startTimer(twentyFiveMinutes, display);
+  };
 
-  buttonContainer.appendChild(pausePlayButton);
-  buttonContainer.appendChild(resetButton);
-
-  mainDiv.appendChild(buttonContainer);
-
-
-
-
-
+showTimer();
 }
+
 
 export default timer

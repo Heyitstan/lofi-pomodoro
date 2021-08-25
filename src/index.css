@@ -46,7 +46,6 @@ code {
   left: 2%;
   width: 10%;
   height: 10%;
-  background: white;
   text-align: center;
   font-size: 1.5em;
   margin: auto;
@@ -65,18 +64,17 @@ code {
   cursor: pointer;
 }
 
+#timer-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
 #button-container {
   position: fixed;
   z-index: 1;
-  top: 15%;
+  top: 10%;
   left: 2%;
   font-size: 1em;
 }
 
-/* #pausePlayButton {
-  position: fixed;
-  z-index: 1;
-  top: 15%;
-  left: 4%;
-  font-size: 1em;
-} */
+
