@@ -8,9 +8,15 @@ import resetTimer from "./Components/reset-timer";
 function App() {
   return (
     <div id="main">
+      <MusicPlayer />
+      <SpotifyPlayer />
 
-      <div id="bg">
+      <div id="timer-container">
+      <div id="button-container">
+        <button id="pausePlayButton" className="btn pause" onClick={pausePlayTimer}>pause</button>
+        <button id="resetButton" className="btn" onClick={resetTimer}>reset</button>
       </div>
+    </div>
 
     <div id="timer-container">
       <div id="button-container">
