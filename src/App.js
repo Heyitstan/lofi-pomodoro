@@ -4,14 +4,16 @@ import './Components/render-bg-and-music'
 import MusicPlayer from "./Components/soundcloud-player";
 import Background from './Components/giphy'
 import SpotifyPlayer from "./Components/spotify";
-// import Timer from './Components/timer';
+import TimerButtons from './Components/timer-buttons';
+import TimerDisplay from './Components/timer-display';
 
 function App() {
   return (
     <div id="main">
       <MusicPlayer />
       <SpotifyPlayer />
-      {/* <Timer /> */}
+      <TimerDisplay />
+      <TimerButtons />
 
       <div id="bg">
         <Background />
