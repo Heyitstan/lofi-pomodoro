@@ -8,8 +8,10 @@ var MusicPlayer = function () {
     {/* <iframe src= {music} title="music" id="music-player" width="220" height="100" scrolling="no" frameBorder="yes" /> */}
     <p id='piano-title'>Relaxing Piano</p>
     <audio id="audio-piano" controls controlsList='nodownload' loop='true' src={piano} type='audio/mpeg' />
+    {document.getElementById('audio-piano').volume=0.2}
     <p id='rain-title'>Rain</p>
     <audio id="audio-rain" controls controlsList='nodownload' loop='true' src="https://www.soundjay.com/nature/sounds/rain-07.mp3" type='audio/mpeg' />
+    {document.getElementById('audio-rain').volume=0.2}
     </div>
   )
 }
