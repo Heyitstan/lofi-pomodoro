@@ -1,5 +1,4 @@
 import piano from './mp3s/Piano-music.mp3'
-import rain from './mp3s/Rain.mp3'
 
 var music = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/325736605&color=%23ff5500&auto_play=false&hide_related=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=&visual=true";
 
@@ -10,7 +9,7 @@ var MusicPlayer = function () {
     <p id='piano-title'>Relaxing Piano</p>
     <audio id="audio-piano" controls controlsList='nodownload' loop='true' src={piano} type='audio/mpeg' />
     <p id='rain-title'>Rain</p>
-    <audio id="audio-rain" controls controlsList='nodownload' loop='true' src={rain} type='audio/mpeg' />
+    <audio id="audio-rain" controls controlsList='nodownload' loop='true' src="https://www.soundjay.com/nature/sounds/rain-07.mp3" type='audio/mpeg' />
     </div>
   )
 }
