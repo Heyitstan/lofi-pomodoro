@@ -1,35 +1,60 @@
-// start timer function
-const TimerDisplay =  function () {
-  return (
-    <div id="timer">timer loading...</div>
-  )
-};
+import React, { useState, useEffect } from 'react';
 
-const startTimer = (duration) => {
-  let timer = duration;
-  let minutes, seconds;
 
-  setInterval(function() {
-    minutes = parseInt(timer / 60, 10); // takes duration provided in milliseconds and divides by 60 to get minutes
 
-    seconds = parseInt(timer % 60, 10); // takes duration provided in milliseconds and modulo 60 to get seconds
+const TimerDisplay = () => {
+  const [duration, setDuration] = useState(1500);
+  const [minutes, setMinutes] = useState('00');
+  const [seconds, setSeconds] = useState('0');
+  const [isActive, setIsActive] = useState(false);  
 
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+  function toggle() {
+    setIsActive(!isActive);
+  }
 
-    let display = document.getElementById('timer');
-    display.textContent = (`${minutes}: ${seconds}`);
+  function reset() {
+    setDuration(1500)
+    setSeconds('0');
+    setMinutes(25);
+    setIsActive(false);
+  }
 
-    if (--timer < 0) {
-      timer = duration;
+
+  useEffect(() => {
+    let interval = null;
+    if (isActive) {
+      interval = setInterval(() => {
+        setDuration(duration => duration - 1);
+        setMinutes(parseInt(duration / 60, 10));
+        setSeconds(parseInt(duration % 60, 10));
+        
+      }, 1000);
+    } else if (!isActive && duration !== 0) {
+      clearInterval(interval);
     }
+    return () => clearInterval(interval);
+  }, [isActive, duration]);
 
-  }, 1000);
+  return (
+    <div className="app">
+      <div className="time">
+      {minutes < 0 ? '0' + minutes : minutes}: {seconds <= 0 ? '0' + seconds : seconds}
+
+      <div id="button-container">
+        <button className={`btn btn-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
+          {isActive ? 'Pause' : 'Start'}
+        </button>
+
+        <button className="btn" onClick={reset}>
+          Reset
+        </button>
+      </div>
+      </div>
+      
+    </div>
+   
+    
+  );
 }
-
-const twentyFiveMinutes = 60 * 25;
-startTimer(twentyFiveMinutes);
-
-
 
 export default TimerDisplay
