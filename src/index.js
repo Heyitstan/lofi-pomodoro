@@ -8,7 +8,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
 import 'jquery/dist/jquery.min.js';
 import 'bootstrap/js/dist/dropdown'; 
-import Popper from 'popper.js';
 
 ReactDOM.render(
   <React.StrictMode>

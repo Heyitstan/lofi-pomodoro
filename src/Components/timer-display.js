@@ -9,7 +9,10 @@ const TimerDisplay = () => {
   function toggle(event) {
     setDuration(event.target.value);
     setIsActive(!isActive);
-    
+  }
+
+  function toggleStart() {
+    setIsActive(!isActive);
   }
 
   function reset() {
@@ -23,10 +26,19 @@ const TimerDisplay = () => {
     let interval = null;
     if (isActive) {
       interval = setInterval(() => {
-        setDuration(duration => duration - 1);
-        setMinutes(parseInt(duration / 60, 10));
-        setSeconds(parseInt(duration % 60, 10));
-        
+        if (duration >= 0) {
+          setDuration(duration => duration - 1);
+          setMinutes(parseInt(duration / 60, 10));
+          setSeconds(parseInt(duration % 60, 10));
+        } else if (duration <= 0) {
+          const alarm = document.getElementById('alarm');
+          alarm.volume = 0.3;
+          alarm.currentTime = 17;
+          alarm.play();
+          console.log(alarm.duration);
+          setIsActive(false);
+          clearInterval(interval);
+        }
       }, 1000);
     } else if (!isActive && duration !== 0) {
       clearInterval(interval);
@@ -38,21 +50,27 @@ const TimerDisplay = () => {
     <div className="app">
       <div className="time">
       {minutes < 0 ? '0' + minutes : minutes}: {seconds <= 0 ? '0' + seconds : seconds}
+      <audio id='alarm' src='https://onlineclock.net/audio/options/applause.mp3' type='audio/mpeg'/>
+
 
       <div id="button-container">
-        <button value="1500" className={`btn btn-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
+        <button className={`btn btn-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggleStart}>
           {isActive ? 'Pause' : 'Start'}
         </button>
 
         <button className="btn" onClick={reset}>
           Reset
         </button>
+
+        <button value="1500" className="btn" onClick={toggle}>
+          25 minutes
+        </button>
    
         <button value="600" className="btn" onClick={toggle}>
           10 minutes
         </button>
 
-        <button value="300" className="btn" onClick={toggle}>
+        <button value="4" className="btn" onClick={toggle}>
           5 minutes
         </button>
 
