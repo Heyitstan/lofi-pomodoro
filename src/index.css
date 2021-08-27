@@ -40,13 +40,6 @@ code {
   border-radius: 10px;
 }
 
-/* #music-player {
-  position: fixed;
-  z-index: 1;
-  left: 2%;
-  bottom: 3%;
-} */
-
 #piano-title {
   position: fixed;
   z-index: 2;
@@ -165,11 +158,10 @@ code {
   display: none;
   position: absolute;
   z-index: 1;
-
 }
 
 .dropdown-content button:hover {
-  background-color: #F1F1F1;
+  background-color: #f1f1f1;
   color: black;
 }
 
@@ -186,6 +178,6 @@ code {
   border-radius: 100px;
 }
 
-#dropdown-button:hover{
-  background-color: #F1F1F1;
+#dropdown-button:hover {
+  background-color: #f1f1f1;
 }

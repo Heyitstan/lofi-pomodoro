@@ -37,18 +37,7 @@ var Background = function () {
       <button id="random-background-btn" type="button" className="btn" onClick={generateNewBackground}>New background</button>
     </div>
   )
-
-  // var myDiv = document.getElementById('bg'); // grabs #bg
-  // var myPath = gif; // initialises string variable myPath
-  // var myImg = document.createElement('img'); // creates a new img element
-
-  // // add attributes to myImg
-  // myImg.setAttribute('src', myPath);
-  // myImg.setAttribute('id', 'background');
-  // myImg.setAttribute('alt', "background image"); 
-  
-  // myDiv.appendChild(myImg); // adds a child element (myImg) to myDiv
 }
 
-// export {gifList}
+
 export default Background
