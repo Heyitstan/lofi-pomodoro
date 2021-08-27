@@ -6,13 +6,25 @@ const TimerDisplay = () => {
   const [seconds, setSeconds] = useState('0');
   const [isActive, setIsActive] = useState(false);  
 
+
+  function dropdown() {
+    document.getElementById('myDropdown').classList.toggle('show');
+  }
+
   function toggle(event) {
-    setDuration(event.target.value);
-    setIsActive(!isActive);
+    if (isActive) {
+      setDuration(event.target.value);
+    } else {
+      setIsActive(!isActive)
+    }
+    document.getElementById('myDropdown').classList.remove('show');
+
   }
 
   function toggleStart() {
     setIsActive(!isActive);
+    document.getElementById('myDropdown').classList.remove('show');
+
   }
 
   function reset() {
@@ -57,22 +69,27 @@ const TimerDisplay = () => {
         <button className={`btn btn-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggleStart}>
           {isActive ? 'Pause' : 'Start'}
         </button>
-
         <button className="btn" onClick={reset}>
           Reset
         </button>
 
-        <button value="1500" className="btn" onClick={toggle}>
-          25 minutes
-        </button>
-   
-        <button value="600" className="btn" onClick={toggle}>
-          10 minutes
-        </button>
+        <div class="dropdown">
+          <button id="dropdown-button" className="btn" onClick={dropdown}>Timer Options</button>
+          <div id="myDropdown" class="dropdown-content">
+            <button value="1500" className="btn" onClick={toggle}>
+              25 minutes
+            </button>
+        
+            <button value="600" className="btn" onClick={toggle}>
+              10 minutes
+            </button>
 
-        <button value="300" className="btn" onClick={toggle}>
-          5 minutes
-        </button>
+            <button value="300" className="btn" onClick={toggle}>
+              5 minutes
+            </button>
+          </div>   
+      </div>
+       
 
 
       </div>
