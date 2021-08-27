@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
-
-
 const TimerDisplay = () => {
   const [duration, setDuration] = useState(1500);
   const [minutes, setMinutes] = useState('00');
   const [seconds, setSeconds] = useState('0');
   const [isActive, setIsActive] = useState(false);  
 
-  function toggle() {
+  function toggle(event) {
+    setDuration(event.target.value);
+    // hide other buttons
     setIsActive(!isActive);
+    
   }
 
   function reset() {
@@ -18,7 +19,6 @@ const TimerDisplay = () => {
     setMinutes(25);
     setIsActive(false);
   }
-
 
   useEffect(() => {
     let interval = null;
@@ -48,6 +48,16 @@ const TimerDisplay = () => {
         <button className="btn" onClick={reset}>
           Reset
         </button>
+   
+        <button value="600" className="btn" onClick={toggle}>
+          10 minutes
+        </button>
+
+        <button value="300" className="btn" onClick={toggle}>
+          5 minutes
+        </button>
+
+
       </div>
       </div>
       
