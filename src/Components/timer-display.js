@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const TimerDisplay = () => {
   const [duration, setDuration] = useState(1500);
-  const [minutes, setMinutes] = useState('00');
+  const [minutes, setMinutes] = useState('25');
   const [seconds, setSeconds] = useState('0');
   const [isActive, setIsActive] = useState(false);  
 
@@ -41,7 +41,7 @@ const TimerDisplay = () => {
       {minutes < 0 ? '0' + minutes : minutes}: {seconds <= 0 ? '0' + seconds : seconds}
 
       <div id="button-container">
-        <button className={`btn btn-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
+        <button value="1500" className={`btn btn-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>
           {isActive ? 'Pause' : 'Start'}
         </button>
 
