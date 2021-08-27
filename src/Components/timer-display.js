@@ -70,7 +70,7 @@ const TimerDisplay = () => {
           10 minutes
         </button>
 
-        <button value="4" className="btn" onClick={toggle}>
+        <button value="300" className="btn" onClick={toggle}>
           5 minutes
         </button>
 
@@ -79,8 +79,6 @@ const TimerDisplay = () => {
       </div>
       
     </div>
-   
-    
   );
 }
 
