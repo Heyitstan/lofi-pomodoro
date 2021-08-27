@@ -8,7 +8,6 @@ const TimerDisplay = () => {
 
   function toggle(event) {
     setDuration(event.target.value);
-    // hide other buttons
     setIsActive(!isActive);
     
   }
