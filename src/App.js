@@ -7,6 +7,7 @@ import SpotifyPlayer from "./Components/spotify";
 // import TimerButtons from './Components/timer-buttons';
 import TimerDisplay from './Components/timer-display';
 import Countdown from './Components/Countdown';
+import DateTime from './Components/clock';
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
       <div id='countdown'><Countdown /></div>
       <MusicPlayer />
       <SpotifyPlayer />
+
       <TimerDisplay />
       {/* <TimerButtons /> */}
 
+      <DateTime />
       <div id="bg">
         <Background />
       </div>

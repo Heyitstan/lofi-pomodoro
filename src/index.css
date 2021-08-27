@@ -35,8 +35,8 @@ code {
 #spotify-player {
   position: fixed;
   z-index: 1;
-  left: 3.5%;
-  bottom: 21%;
+  left: 2.5%;
+  bottom: 19%;
   border-radius: 10px;
 }
 
@@ -50,38 +50,54 @@ code {
 #piano-title {
   position: fixed;
   z-index: 2;
-  left: 6%;
+  left: 4.75%;
   bottom: 5%;
   background-color: lightgrey;
   border-radius: 5px;
-  padding: 1px 10px;
+  padding: 3px 15px;
   font-weight: bold;
 }
 
 #audio-piano {
   position: fixed;
   z-index: 1;
-  left: 2%;
+  left: 1%;
   bottom: 3%;
   width: 15%;
   height: 4%;
 }
 
+#clock {
+  position: fixed;
+  z-index: 1;
+  right: 1.5%;
+  top: 2%;
+  border-radius: 30px;
+  padding: 8px 20px;
+  padding-top: 18px;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 4px 2px;
+  background-color: lightsteelblue;
+  text-align: center;
+  width: 15%;
+}
+
 #rain-title {
   position: fixed;
   z-index: 2;
-  left: 8%;
+  left: 7%;
   bottom: 13%;
   background-color: lightgrey;
   border-radius: 5px;
-  padding: 1px 10px;
+  padding: 3px 15px;
   font-weight: bold;
 }
 
 #audio-rain {
   position: fixed;
   z-index: 1;
-  left: 2%;
+  left: 1%;
   bottom: 11%;
   width: 15%;
   height: 4%;
@@ -111,10 +127,10 @@ code {
 #random-background-btn {
   position: fixed;
   z-index: 1;
-  left: 19%;
+  right: 1.5%;
   bottom: 2%;
   border-radius: 10px;
-  padding: 8px 20px;
+  padding: 10px 22px;
   font-weight: bold;
   font-size: 18px;
   margin: 4px 2px;

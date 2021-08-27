@@ -14,8 +14,8 @@ var MusicPlayer = function () {
         return;
       }
   
-      piano.volume = 0.2;
-      rain.volume = 0.2;
+      piano.volume = 0.6;
+      rain.volume = 0.4;
     }, []); // Empty array here means "only run it once on page load"
   return (
     <div>
@@ -23,14 +23,17 @@ var MusicPlayer = function () {
     <p id='piano-title'>Relaxing Piano</p>
     <audio id="audio-piano" controls controlsList='nodownload' loop='true' src={piano} type='audio/mpeg' />
     <p id='rain-title'>Rain</p>
-    <audio id="audio-rain" controls controlsList='nodownload' loop='true' src="https://www.soundjay.com/nature/sounds/rain-07.mp3" type='audio/mpeg' />
+    <audio id="audio-rain" controls controlsList='nodownload' loop='true' src="https://assets.mixkit.co/sfx/preview/mixkit-light-rain-looping-1249.mp3" type='audio/mpeg' />
     </div>
   )
 }
+// https://www.soundjay.com/nature/sounds/rain-07.mp3
+// alternate rain link
+
 //   var mainDiv = document.getElementById('main'); // grabs #main
 //   var musicPath = music; // initialises string variable musicPath
 //   var myPlayer = document.createElement('iframe'); // creates a new iframe element
-  
+
 //   // add attributes to myPlayer
 //   myPlayer.setAttribute('src', musicPath);
 //   myPlayer.setAttribute('title', 'music');
