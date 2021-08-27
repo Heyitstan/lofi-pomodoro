@@ -12,19 +12,19 @@ const TimerDisplay = () => {
   }
 
   function toggle(event) {
-    if (isActive) {
-      setDuration(event.target.value);
-    } else {
-      setIsActive(!isActive)
-    }
+    // if (isActive) {
+    //   setDuration(event.target.value);
+    // } else {
+    //   setIsActive(!isActive)
+    // }
+    setDuration(event.target.value)
+    setIsActive(!isActive)
     document.getElementById('myDropdown').classList.remove('show');
-
   }
 
   function toggleStart() {
     setIsActive(!isActive);
     document.getElementById('myDropdown').classList.remove('show');
-
   }
 
   function reset() {
@@ -89,12 +89,8 @@ const TimerDisplay = () => {
             </button>
           </div>   
       </div>
-       
-
-
       </div>
       </div>
-      
     </div>
   );
 }
