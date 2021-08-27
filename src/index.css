@@ -86,18 +86,27 @@ code {
   width: 15%;
   height: 4%;
 }
-
-#timer {
+/* .app {
+  background: rgba(255,255,255, 0.2);
   position: fixed;
   z-index: 1;
-  top: 2%;
+} */
+.time {
+  position: fixed;
+  z-index: 1;
+  top: 3%;
   left: 2%;
   width: 10%;
   height: 10%;
   text-align: center;
   font-size: 1.5em;
+  color: #141414;
   margin: auto;
-  border-radius: 100px;
+  background: rgba(255,255,255, 0.5);
+  border-radius: 2rem;
+  box-shadow: 2px 2px 10px rgba(255,255,255, 0.4);
+  padding: 5px;
+
 }
 
 #random-background-btn {
@@ -115,13 +124,25 @@ code {
 }
 
 #button-container {
-  position: fixed;
-  z-index: 1;
-  top: 6%;
-  left: 2%;
+  top: 10%;
+  left: 1%;
   font-size: 1em;
+  /* background: rgba(255,255,255, 0.5); */
+
 }
 
-#button-container > button {
-  color: black;
+.button-container > button:hover {
+  color: green;
+}
+
+.btn-primary-active {
+  background-color: #3151ff;
+  border: 1px solid #152684;
+  color: white;
+}
+
+.btn-primary-inactive {
+  background-color: #3151ff;
+  border: 1px solid #152684;
+  color: white;
 }
